@@ -1,0 +1,69 @@
+<form [formGroup]="myForm" class="two-column-form custom-form-padding">
+  <div class="form-column">
+    <div class="form-group">
+      <label for="principalAmount">Investment Amount (Rs.)</label>
+      <input
+        type="number"
+        formControlName="principalAmount"
+        placeholder="Principal Amount"
+      />
+    </div>
+    <div class="form-group">
+      <label for="interestRate">Interest Rate (%)</label>
+      <input
+        type="number"
+        formControlName="interestRate"
+        placeholder="Interest Rate"
+      />
+    </div>
+  </div>
+
+  <div class="form-column">
+    <div class="form-group">
+      <label for="months">Months to Invest</label>
+      <input type="number" formControlName="months" placeholder="Months" />
+    </div>
+    <div class="form-group">
+      <label for="perDay">Investment per Day</label>
+      <input
+        type="number"
+        formControlName="perDay"
+        placeholder="Investment per day"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="startDate">Start Date</label>
+    <input type="date" formControlName="startDate" placeholder="Start Date" />
+  </div>
+</form>
+<div class="center-container">
+  <div class="profit-gained">
+    Profit gained at
+    <span class="highlight">{{ final.date | date: 'yyyy-MM-dd' }}</span>
+    after
+    <span class="highlight">{{ myForm.value.months }} months</span>
+    of investment is
+    <span class="highlight">{{ final.totalProfit | number: '1.2-2' }}</span>
+  </div>
+</div>
+
+<table class="custom-form-padding">
+  <thead>
+    <th>Date</th>
+    <th>Start Day Amount (Rs.)</th>
+    <th>End Day Amount (Rs.)</th>
+    <th>Profit (Rs.)</th>
+    <th>Total Profit (Rs.)</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td>{{ transaction.date | date: 'yyyy-MM-dd' }}</td>
+      <td>{{ transaction.startAmount | number: '1.2-2' }}</td>
+      <td>{{ transaction.endAmount | number: '1.2-2' }}</td>
+      <td>{{ transaction.profit | number: '1.2-2' }}</td>
+      <td>{{ transaction.totalProfit | number: '1.2-2' }}</td>
+    </tr>
+  </tbody>
+</table>

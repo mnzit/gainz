@@ -1,0 +1,128 @@
+/* CSS for the form container */
+.two-column-form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* CSS for form columns */
+.form-column {
+  flex-basis: 48%; /* Adjust the width of the columns as needed */
+}
+
+/* CSS for form elements */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+form input[type='number'],
+form input[type='date'] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+form input[type='number']:focus,
+form input[type='date']:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* CSS for the submit button */
+button[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+/* CSS for the table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+/* CSS for table header */
+thead th {
+  font-weight: bold;
+  color: #333;
+}
+
+/* CSS for table body */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  color: #444;
+}
+
+/* CSS for numbers with two decimal places */
+td:not(:first-child) {
+  font-family: monospace;
+}
+
+/* CSS for the form container and table */
+.two-column-form.custom-form-padding,
+table.custom-form-padding {
+  padding: 10px;
+  /* Adjust the desired padding value as needed */
+}
+
+/* CSS for the form columns */
+.form-column {
+  flex-basis: 48%;
+  /* Adjust the width of the columns as needed */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profit-gained {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.highlight {
+  color: #007bff;
+}
