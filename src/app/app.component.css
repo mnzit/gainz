@@ -1,0 +1,119 @@
+/* Reset some default styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Container for the form */
+  .two-column-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Form columns */
+  .form-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+  }
+  
+  /* Form fields and labels */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-group input[type='number'],
+  .form-group input[type='date'] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  /* Center container for profit-gained section */
+  .center-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .profit-gained {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    color: #007bff; /* Use your preferred highlight color */
+  }
+  
+  /* Styling for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th,
+  table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  /* Adjust table header styles */
+  table th {
+    background-color: #f2f2f2; /* Use your preferred header background color */
+    font-weight: bold;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 600px) {
+    .form-column {
+      flex: 100%;
+    }
+  }
+  
+  /* Additional responsive adjustments as needed */
+  @media screen and (max-width: 400px) {
+    .form-group input[type='number'],
+    .form-group input[type='date'] {
+      width: 100%;
+    }
+  
+    table th,
+    table td {
+      font-size: 14px;
+    }
+  }
+  
+  /* Highlight the last row */
+  tr.highlighted-row {
+    background-color: #f2f2f2; /* Use your preferred highlight background color */
+    font-weight: bold; /* You can also adjust the font-weight to make it more prominent */
+  }
+  
+  /* Make the last row sticky */
+  table {
+    position: relative;
+  }
+  
+  tbody tr:last-child {
+    position: sticky;
+    bottom: 0;
+    background-color: #fff; /* Use the background color of the table body */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Add a shadow to separate the last row from the rest */
+  }
+  
