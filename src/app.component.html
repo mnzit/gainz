@@ -50,6 +50,7 @@
 
 <table class="custom-form-padding">
   <thead>
+    <th>Day</th>
     <th>Date</th>
     <th>Start Day Amount (Rs.)</th>
     <th>End Day Amount (Rs.)</th>
@@ -57,7 +58,13 @@
     <th>Total Profit (Rs.)</th>
   </thead>
   <tbody>
-    <tr *ngFor="let transaction of transactions">
+    <!-- Your table rows here -->
+    <tr
+      *ngFor="let transaction of transactions; let i = index"
+      [ngClass]="{ 'highlighted-row': i === transactions.length - 1 }"
+    >
+      <td>{{ i + 1 }}</td>
+      <!-- Displaying index (i+1) as index starts from 0 -->
       <td>{{ transaction.date | date: 'yyyy-MM-dd' }}</td>
       <td>{{ transaction.startAmount | number: '1.2-2' }}</td>
       <td>{{ transaction.endAmount | number: '1.2-2' }}</td>
