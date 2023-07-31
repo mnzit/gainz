@@ -117,3 +117,7 @@
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Add a shadow to separate the last row from the rest */
   }
   
+
+  input[readonly] {
+    background: #ccc;
+  }
